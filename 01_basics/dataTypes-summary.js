@@ -37,3 +37,25 @@ console.log(typeof anotherId);
 // https://262.ecma-international.org/5.1/#sec-11.4.3
 
 // Array, Objects, Functions
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+// MEMORY
+// Stack, Heap
+
+let myYoutubeName = "muditYT"
+let anotherName = myYoutubeName
+anotherName = "YTmudit"
+
+console.log(myYoutubeName)
+console.log(anotherName)
+
+let userOne = {
+    email: "mudit@google.com",
+    upi: "mudit@ybl"
+}
+
+let userTwo = userOne
+
+console.log(userTwo)
