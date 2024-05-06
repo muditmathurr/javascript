@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Timeout</title>
+</head>
+<body>
+    <h1>Who's This??</h1>
+    <button id="btn">Stop</button>    
+</body>
+<script>
+    const stop = document.querySelector('h1')
+    // setTimeout(() => {
+    //     console.log("My Name is: ");    
+    // }, 3000);
+        // OR 
+    const sayMyName = function(){
+        console.log("mudit");
+    }
+    const stopConsole = setTimeout(sayMyName, 4000);
+    
+    const changeH1 = function(){
+        document.querySelector('h1').innerHTML = "My Name is Mudit Mathur!"
+    }
+    const changeMe = setTimeout(changeH1,4000);
+
+    document.querySelector('#btn').addEventListener('click', function() {
+        clearTimeout(stopConsole);
+        clearTimeout(changeMe);
+
+        console.log("STOPPED!");
+    })
+</script>
+</html>

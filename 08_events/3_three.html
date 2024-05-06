@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set Interval</title>
+  </head>
+  <body>
+    <h1>Date</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    // setInterval((str) => {
+    //     console.log('Hello,',str, Date.now());
+    // }, 1000,"Today's date is ");
+    document.querySelector("#start").addEventListener("click", function () {
+      const run = function (str) {
+        console.log("Hello,", str, Date.now());
+      };
+      const task = setInterval(run, 1000, "Mudit");
+
+      document.querySelector("#stop").addEventListener("click", function () {
+        clearInterval(task);
+      });
+    });
+  </script>
+</html>
